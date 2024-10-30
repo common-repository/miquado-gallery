@@ -1,0 +1,361 @@
+/* general styles */
+.MQFloatLeft {float: left; display: inline;} 
+.MQFloatRight {float: right; display: inline;}
+.MQColumn {width: auto; height: 100%; overflow: hidden;}
+.MQClearing {content: "."; height: 0; visibility: hidden; clear: both; width: 100%; font-size: 0; line-height: 0;}
+.MQRowup {display: inline-block; vertical-align: top;}
+/*hacks for ie6 and ie7*/
+* html .MQRowup {display: inline;} 
+*:first-child+html .MQRowup {display: inline;}
+
+/* Form styles */
+input.mqnotvalid {background-color: orange;}
+select.mqnotvalid {background-color: orange;}
+textarea.mqnotvalid {background-color: orange;}
+input[type='checkbox'].mqnotvalid,
+input[type='radio'].mqnotvalid {outline: 3px solid orange;} 
+span.mqfieldkey {display:inline-block;width:1.5em;vertical-align:top;}
+span.mceEditor {display:inline-block;}
+
+dl.mqformfield {
+  padding: 0 0 5px 0;
+  margin:0;
+}
+dl.mqformfield dt,
+dl.mqformfield dd {
+  display:block;
+  padding:0;
+  margin:0;
+}
+dl.mqfielderror,
+dl.mqfieldinfo
+{
+  display:inline-block;
+  vertical-align:top;
+  position:relative;
+  margin:0;
+  padding:0;
+  text-decoration:none;
+  color:black;
+}
+dl.mqfielderror dt
+{
+  text-align:left;
+  background-color:orange;
+  cursor:pointer;
+}
+
+dl.mqfieldinfo dt
+{
+  text-align:left;
+  background-color:lightblue;
+  cursor:pointer;
+}
+
+dl.mqfieldinfo dd 
+{
+  display:none;
+  position:absolute;
+  padding:5px;
+  margin:0;
+  min-width:200px;
+  color:black;
+  z-index:1000;
+  border: 1px solid black;
+  outline: 1px solid white;
+  text-align:left;
+  background-color:lightblue;
+}
+
+dl.mqfielderror dd
+{
+  text-align:left;
+  background-color:orange;
+  display:none;
+  position:absolute;
+  padding:5px;
+  margin:0;
+  min-width:200px;
+  color:black;
+  z-index:1000;
+  border: 1px solid black;
+  outline: 1px solid white;
+}
+
+dl.fieldlist {padding:0;margin:0;}
+dl.fieldlist dt {display:inline;padding-right:5px;}
+dl.fieldlist dd {display:inline;}
+span.fieldlist {display:inline-block;vertical-align:top;}
+p.ok {margin: 1em 0em 1em 0em; padding: 5px; background-color: green; color: white;}
+p.ok a {color:white;}
+p.error {margin: 1em 0em 1em 0em; padding: 5px; background-color: orange; color: black;}
+p.warning {margin: 1em 0em 0em 0em; padding: 5px; background-color: orange; color: black;}
+span.warning {color: orange;}
+span.error {color: red;}
+span.ok {color: green;}
+
+/* IE 7 fix */
+*:first-child+html dl.mqfieldinfo {display: inline;}
+*:first-child+html dl.mqfielderror {display: inline;}
+/* Buttons */
+a.mqbutton 
+{
+  font-size: 12px;
+  line-height: 12px;
+  margin:0 1px 0 1px;
+  border-radius: 3px;
+  background:#eee;
+  display:inline-block;
+  padding: 1px 3px 1px 3px;
+  text-decoration:none;
+  border:1px solid #333;
+
+}
+
+/* Styles for Tables */
+table.mqdefault {
+  border-collapse:collapse;
+}
+table.mqdefault td, 
+table.mqdefault th {
+  vertical-align:top;
+  text-align:left;
+  padding:2px 5px 2px 0px;
+  border-bottom: 1px solid #eee;
+}
+table.mqdefault tr.sumline td {
+  font-weight:bold;
+  padding:4px 5px 4px 0px;
+}
+table.mqdefault tr.total td {
+  font-weight:bold;
+  padding:4px 5px 4px 0px;
+}
+table.mqdefault td.ralign, 
+table.mqdefault th.ralign {
+  text-align:right;
+}
+table.mqdefault td.calign, 
+table.mqdefault th.calign {
+  text-align:center;
+}
+table.mqdefault td.lalign, 
+table.mqdefault th.lalign {
+  text-align:left;
+}
+/* Styles for index views */
+dl.MQGCategory,
+dl.MQGGallery,
+dl.MQGImage
+{
+  display:inline-block;
+  vertical-align:top;
+  margin:0 10px 10px 0;
+  padding:0;
+}
+*:first-child+html dl.MQGCategory {display: inline;}
+*:first-child+html dl.MQGGallery {display: inline;}
+*:first-child+html dl.MQGImage {display: inline;}
+
+dl.MQGCategory dt,
+dl.MQGCategory dd,
+dl.MQGGallery dt,
+dl.MQGGallery dd,
+dl.MQGImage dt,
+dl.MQGImage dd
+{
+  margin:0;
+  padding:0;
+  display:block;
+  text-align:center;
+} 
+dl.MQGCategory img,
+dl.MQGGallery img,
+dl.MQGImage img
+{
+  border:solid transparent;
+}
+dl.MQGCategory img:hover,
+dl.MQGGallery img:hover,
+dl.MQGImage img:hover
+{
+  border:solid;
+}
+
+
+/* Thumbs vorgabe */
+div.MQGImageThumbs {
+  padding-top:1em;
+}
+
+div.MQGImageThumbsBlock { display:inline-block;}
+*+html div.MQGImageThumbsBlock {display:inline !important;}
+div.MQGImageThumbsSpacer { display:inline-block;}
+*+html div.MQGImageThumbsSpacer {display:inline !important;}
+
+div.MQGImageThumbs img {
+  opacity:0.7;
+  filter:alpha(opacity=70);
+}
+div.MQGImageThumbs a:hover img {
+  opacity:1;
+  filter:alpha(opacity=100);
+}
+div.MQGImageThumbs img.active {
+  opacity:1;
+  filter:alpha(opacity=100);
+}
+div.MQGImageThumbpages a.mqgpage {
+  color: white;
+  width:2.5em;
+  padding:0;margin:0 2px 0 0;
+  text-align:center;
+  background: #aaaaaa;
+  display:inline-block;
+  border:1px solid;
+  text-decoration:none;
+}
+*+html div.MQGImageThumbpages a {display:inline !important;}
+
+div.MQGImageThumbpages a:hover {
+  background:black;
+  text-decoration:none:
+}
+
+div.MQGImageThumbpages a.active {
+  background:black;
+  text-decoration:none:
+}
+
+
+div.MQGImageTitle {
+  padding:0;margin:0;
+  line-height:1.5em;
+  min-height:1.5em;
+}
+div.MQGImageDescription {
+  padding:0;margin:0;
+  line-height:1.5em;
+  min-height:1.5em;
+}
+
+/* Image Infos */
+div.MQGImageInfo.hidden {
+  display:none;
+}
+div.MQGImageInfo.visible {
+  display:block;
+}
+
+/* MQGImageboxSale */
+div.MQGImageboxSale {
+  font-size:12px;
+  line-height:18px;
+  background-color: rgba(250,250,250,0.1);
+  padding:10px;
+  position:relative;
+}
+div.MQGImageboxSale button.closing {
+  position:absolute;
+  right:10px;
+  top:10px;
+
+}
+
+dl.mqgproductcategory {
+  margin:0;
+  padding:0 0 10px 0;
+  width:100%;
+  clear:both;
+}
+dd.mqgproductcategory  {
+  padding:0;
+  margin:0;
+  display:block;
+}
+dt.mqgproductcategory{
+  padding:0;
+  margin:0;
+  display:block;
+  font-weight:bold;
+  font-size:larger;
+}
+dl.mqgproduct {
+  padding:0 0 2px 0;
+  margin:0;
+  clear:both;
+}
+dt.mqgproduct {
+  width:30px;
+  padding:0;
+  margin:0 ;
+}
+dd.mqgproduct  {
+  margin:0;
+  padding:0;
+}
+
+/* Cart  and Checkou */
+div.MQGCheckout {
+  padding:0 0 1em 0;
+}
+div.MQGCheckout span {
+  display:inline-box;
+  margin-right: 20px;
+  padding: 5px 20px;
+}
+div.MQGCheckout span.active {
+  background-color:#eee;
+  color:black;
+  border:1px solid;
+}
+div.MQGCheckout span.inactive {
+  background-color:#afafaf;
+  color:#444;
+  border:1px solid transparent;
+}
+
+div#mqgallerycartsummary dl {
+  padding:0;
+  margin:0;
+}
+
+div#mqgallerycartsummary dl dt {
+  display:block;
+  padding:0;
+  margin:0;
+}
+div#mqgallerycartsummary dl dt a {
+  text-decoration:none;
+  color:inherit;
+}
+div#mqgallerycartsummary dl dd {
+  display: none;
+  padding:5px 0 0 0;
+  margin:0;
+}
+div#mqgallerycartsummary.updated dl dd {
+  display:block;
+}
+
+div#mqgallerycartsummary dl:hover dd {
+  display:block;
+}
+
+div#mqgallerycartsummary div.title {
+  font-weight:bold;
+  line-height:1.5em;
+}
+div#mqgallerycartsummary a.mqgshowcartbutton {
+  border-width:1px;
+  border-style:solid;
+  border-color: #eee #444 #444 #eee;
+  background:#afafaf;
+  padding:5px;
+  display:inline-block;
+  color:#2c2c2c;
+  text-decoration:none;
+}
+
+
+

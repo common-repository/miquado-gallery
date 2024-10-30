@@ -1,0 +1,322 @@
+/* 
+##########################################################################
+# General Styles 
+##########################################################################
+*/
+.floatLeft {float: left; display: inline;} 
+.floatRight {float: right; display: inline;}
+.column {width: auto; height: 100%; overflow: hidden;}
+.centered {margin: auto;}
+.clearing {content: "."; height: 0; visibility: hidden; clear: both; 
+           width: 100%; font-size: 0; line-height: 0;} 
+
+/* Layout */
+div.MQGalleryBackend {padding-left: 1em;padding-top:1em;min-height:400px;}
+#MQGalleryTitle {
+  font-size:14px;
+  font-weight:bold;
+}
+#MQGalleryHeader {
+  height:60px;
+  position:relative;
+}
+#MQGalleryVersion {
+  position:absolute;
+  left: 180px;
+  top:10px;
+  font-size:8px;
+  font-weight:normal;
+}
+#MQGalleryLogo {
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+/* Formular */
+input.mqnotvalid {background-color: orange;}
+select.mqnotvalid {background-color: orange;}
+textarea.mqnotvalid {background-color: orange;}
+div.mqformular tr {border-top: 1px solid #aaa;}
+div.mqformular td {padding: 5px 10px 0px 5px;text-align:left;vertical-align:top;}
+span.mqfieldkey {display:inline-block;width:1.5em;vertical-align:top;}
+span.mceEditor {display:inline-block;}
+dl.mqfieldinfo {display:inline;vertical-align:top;position:relative;margin-left:0.5em;}
+dt.mqfieldinfo {display:inline;background-color:lightblue;color:black;}
+dd.mqfieldinfo {position:absolute;padding:5px;left:0;background:lightblue;color:black;z-index:1000;min-width:200px;}
+dl.mqfielderror {display:inline;vertical-align:top;position:relative;margin-left:0.5em;}
+dt.mqfielderror {display:inline;background-color:orange;color:black;}
+dd.mqfielderror {position:absolute;padding:5px;left:0;background:orange;color:black;z-index:1000;min-width:200px;}
+dl.fieldlist {padding:0;margin:0;}
+dl.fieldlist dt {display:inline;padding-right:5px;}
+dl.fieldlist dd {display:inline;}
+span.fieldlist {display:inline-block;vertical-align:top;}
+input.mqtrimw {width:400px;}
+textarea.mqtrimw {width:400px;}
+dl.mqfielderror,
+dl.mqfieldinfo
+{
+  display:inline-block;
+  vertical-align:top;
+  position:relative;
+  margin:0;
+  padding:0;
+  text-decoration:none;
+  color:black;
+}
+dl.mqfielderror dt
+{
+  text-align:left;
+  background-color:orange;
+  cursor:pointer;
+}
+
+dl.mqfieldinfo dt
+{
+  text-align:left;
+  background-color:lightblue;
+  cursor:pointer;
+}
+
+dl.mqfieldinfo dd 
+{
+  display:none;
+  position:absolute;
+  padding:5px;
+  margin:0;
+  min-width:200px;
+  color:black;
+  z-index:1000;
+  border: 1px solid black;
+  outline: 1px solid white;
+  text-align:left;
+  background-color:lightblue;
+}
+
+dl.mqfielderror dd
+{
+  text-align:left;
+  background-color:orange;
+  display:none;
+  position:absolute;
+  padding:5px;
+  margin:0;
+  min-width:200px;
+  color:black;
+  z-index:1000;
+  border: 1px solid black;
+  outline: 1px solid white;
+}
+
+
+h1 {margin: 0 0 0 0;padding: 0 0 1em 0;font-size: 2em;}
+h2 {margin: 0 0 0 0;padding: 1em 0 0.5em 0;font-size: 1.5em;}
+p {margin: 0 0 0 0; padding: 0 0 1em 0;}
+p.ok {margin: 1em 0em 0em 0em; padding: 5px; background-color: green; color: white;}
+p.error {margin: 1em 0em 0em 0em; padding: 5px; background-color: orange; color: black;}
+p.warning {margin: 1em 0em 0em 0em; padding: 5px; background-color: yellow; color: black;}
+
+/* Button */
+a.mqbutton 
+{
+  width:12px;
+  height:12px;
+  font-size: 12px;
+  line-height: 12px;
+  margin:0 1px 0 1px;
+  border-radius: 3px;
+  background:#eee;
+  display:inline-block;
+  padding: 1px 3px 1px 3px;
+  text-decoration:none;
+  border:1px solid #333;
+  cursor:pointer;
+  background-repeat = 'no-repeat';
+}
+
+/*Selection and Sorting */
+img.selected {height: 100px;border: 3px solid red;}
+img.notselected {height: 100px; border: 3px solid transparent;}
+span.isnotdst,span.isdst {width:20px;padding:0 0 2px 0;margin:2px 0 0 0;vertical-align: top;background-color:black;color:black;}
+span.isnotdst {opacity:0;}
+span.isdst {opacity:1;}
+span.isnotdst:hover {opacity:1;}
+
+/* default lists */
+table.mqdefault {
+  border-collapse:collapse;
+}
+table.mqdefault td, 
+table.mqdefault th {
+  vertical-align:top;
+  text-align:left;
+  padding:2px 5px 2px 0px;
+  border-bottom: 1px solid #eee;
+}
+table.mqdefault tr.sumline td {
+  font-weight:bold;
+  padding:4px 5px 4px 0px;
+}
+table.mqdefault tr.total td {
+  font-weight:bold;
+  padding:4px 5px 4px 0px;
+}
+table.mqdefault td.ralign, 
+table.mqdefault th.ralign {
+  text-align:right;
+}
+table.mqdefault td.calign, 
+table.mqdefault th.calign {
+  text-align:center;
+}
+table.mqdefault td.lalign, 
+table.mqdefault th.lalign {
+  text-align:left;
+}
+table.mqdefault tr.inactive {background:#fffff4;}
+
+/* Structure list */
+div#MQGalleryContent table.mqgstructure {
+  border-bottom: 1px solid #aaa;
+  border-collapse:collapse;
+}
+div#MQGalleryContent table.mqgstructure tr.level0 td {
+  padding: 2px 10px 2px 5px;
+  text-align:left;
+  vertical-align:center;
+  border-top:1px solid #aaa; 
+  background-color: #f0f0f0;
+
+  }
+div#MQGalleryContent table.mqgstructure tr.level1 td {
+  padding: 2px 10px 2px 5px;
+  text-align:left;
+  vertical-align:center;
+  border-top:1px solid #aaa; 
+  }
+div#MQGalleryContent table.mqgstructure tr th {
+  padding: 2px 10px 2px 5px;
+  text-align:left;
+  vertical-align:bottom;
+  }
+div#MQGalleryContent table.mqgstructure tr.inactive {font-style:italic;background:#fffff4;}
+
+#MQGGalleryList td {vertical-align:top;}
+
+/* Category and Group edit */
+img.mqsemimagepreview {margin-left:20px;height:50px;}
+button.mqsemimageremove {margin-left:-20px;}
+
+/* ToggleLinks */
+span.on {color: green;}
+span.off {color: red;}
+
+/* Add Children button */
+span.addchildrenbutton {position:relative;}
+span.addchildrenbutton div.content {display:none;background-color:white;width:250px;padding:10px;border:1px solid black;}
+span.addchildrenbutton:hover div.content {display:block;position:absolute;left:0px;top:0px;}
+
+
+
+/*
+#########################################################################
+# Main Navigation
+#########################################################################
+*/
+/* Struktur */
+#mqgmainnav {display:block; height:30px;}
+#mqgmainnav ul { margin:0; padding:0; float:left; }
+#mqgmainnav li { margin:0; padding:0; list-style-type:none; }
+#mqgmainnav ul li { float:left; } 
+#mqgmainnav li { position:relative;width:150px;}
+#mqgmainnav li ul { position:absolute;width:150px;z-index:2;}
+#mqgmainnav li ul li { width:150px; }
+#mqgmainnav a {text-decoration:none;}
+#mqgmainnav ul li a { display:block; padding: 5px; }
+#mqgmainnav ul ul li a { display:block; padding: 5px; }
+/* Farben */
+#mqgmainnav a {color:white;}
+#mqgmainnav li {background: #444;color:white;}
+#mqgmainnav li a {border-right:1px solid white;}
+#mqgmainnav li ul li a {border-top: 1px solid white;}
+/* Farben Dynamisch */
+#mqgmainnav li:hover a {background:#666;}
+#mqgmainnav li:hover li a {background:#444;}
+
+/* ############# Gallery List Styles */
+#MQGGalleryList div.bundle 
+{
+  display:inline-block;
+  vertical-align:top;
+  padding:0;
+  margin:0;
+  margin-bottom:10px;
+  position:relative;
+  text-align:left;
+}
+#MQGGalleryList div.imageid 
+{
+  position:absolute;
+  top:5px;
+  left:25px;
+  background:rgba(255,255,255,0.8);
+  visibility:hidden;
+  z-index:1;
+  
+}
+
+
+#MQGGalleryList div.imagectrl 
+{
+  position:absolute;
+  bottom:5px;
+  left:25px;
+  background:rgba(255,255,255,0.5);
+  visibility:hidden;
+  font-size:small;
+  z-index:1;
+}
+#MQGGalleryList div.bundle:hover div.imageid {visibility:visible;}
+#MQGGalleryList div.bundle:hover div.imagectrl {visibility:visible;}
+
+
+#MQGGalleryList img.notselected 
+{
+  height:120px;
+  border:5px solid transparent;
+}
+#MQGGalleryList img.selected 
+{
+  height:120px;
+  border:5px solid red;
+}
+
+#MQGGalleryList label.isnotarget {
+  background:white;
+}
+#MQGGalleryList label.isnotarget:hover {
+  background:black;
+}
+dl.MQGImage {display:block;margin:0;padding:0;}
+dl.MQGImage dt {
+  display:inline-block;
+  vertical-align:top;
+  margin: 5px 0 5px 0;
+  padding:0;
+  border-top:5px solid white;
+  border-bottom:5px solid white;
+  padding:0px;
+  height:120px;
+  width:20px;
+  background:white;
+  color:black;
+  text-align:right;
+}
+dl.MQGImage dt.istarget {background:black;color:white;margin:0;padding:0;}
+dl.MQGImage dt.isnotarget {background:white;color:black;margin:0;padding:0;}
+dl.MQGImage dt:hover {background:black;color:white;margin:0;padding:0;}
+dl.MQGImage dd {display:inline-block;vertical-align:top;margin:0;padding:0;}
+img.MQGImagetypeLogo {
+  max-width:300px;
+  background-color: rgba(100,100,100,0.5);
+}

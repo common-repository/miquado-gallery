@@ -1,0 +1,17 @@
+div.formular tr {border-top: 1px solid #aaa;}
+div.formular  td {padding: 5px 10px 5px 5px;text-align:left;vertical-align:top;}
+input.mqnotvalid {background-color: orange;}
+select.mqnotvalid {background-color: orange;}
+textarea.mqnotvalid {background-color: orange;}
+input[type='checkbox'].mqnotvalid,
+input[type='radio'].mqnotvalid {outline: 3px solid orange;} 
+span.mqfieldkey {display:inline-block;width:0;vertical-align:top;}
+span.mceEditor {display:inline-block;}
+dl.mqfieldinfo {display:inline;vertical-align:top;position:relative;margin-left:0.5em;}
+dt.mqfieldinfo {display:inline;background-color:lightblue;color:black;}
+dd.mqfieldinfo {position:absolute;padding:5px;left:0;background:lightblue;color:black;z-index:1000;min-width:200px;}
+dl.mqfielderror {display:inline;vertical-align:top;position:relative;margin-left:0.5em;}
+dt.mqfielderror {display:inline;background-color:orange;color:black;}
+dd.mqfielderror {position:absolute;padding:5px;right:0;background:orange;color:black;z-index:1000;min-width:200px;}
+dl.fieldlist dt {display:inline;}
+dl.fieldlist dd {display:inline;}
